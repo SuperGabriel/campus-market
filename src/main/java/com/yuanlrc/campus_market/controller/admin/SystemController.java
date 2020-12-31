@@ -51,25 +51,25 @@ public class SystemController {
 
 	@Autowired
 	private OrderAuthService orderAuthService;
-	
+
 	@Autowired
 	private OperaterLogService operaterLogService;
-	
+
 	@Autowired
 	private UserService userService;
-	
+
 	@Autowired
 	private DatabaseBakService databaseBakService;
-	
+
 	@Autowired
 	private StudentService studentService;
-	
+
 	@Autowired
 	private GoodsService goodsService;
-	
+
 	@Autowired
 	private WantedGoodsService wantedGoodsService;
-	
+
 	@Autowired
 	private CommentService commentService;
 	@Value("${show.tips.text}")
@@ -80,9 +80,9 @@ public class SystemController {
 	private String showTipsBtnText;
 	@Value("${show.tips.url}")
 	private String showTipsUtl;
-	
+
 	private Logger log = LoggerFactory.getLogger(SystemController.class);
-	
+
 	/**
 	 * 登录页面
 	 * @param name
@@ -93,7 +93,7 @@ public class SystemController {
 	public String login(Model model){
 		return "admin/system/login";
 	}
-	
+
 	/**
 	 * 用户登录提交表单处理方法
 	 * @param request
@@ -156,7 +156,7 @@ public class SystemController {
 		log.info("用户成功登录，user = " + findByUsername);
 		return Result.success(true);
 	}
-	
+
 	/**
 	 * 登录成功后的系统主页
 	 * @param model
@@ -173,13 +173,13 @@ public class SystemController {
 		model.addAttribute("goodsTotal", goodsService.total());
 		model.addAttribute("commentTotal", commentService.total());
 		model.addAttribute("wantGoodsTotal", wantedGoodsService.total());
-		model.addAttribute("showTipsText", showTipsText);
-		model.addAttribute("showTipsUrlText", showTipsUrlText);
-		model.addAttribute("showTipsUtl", showTipsUtl);
-		model.addAttribute("showTipsBtnText", showTipsBtnText);
+//		model.addAttribute("showTipsText", showTipsText);
+//		model.addAttribute("showTipsUrlText", showTipsUrlText);
+//		model.addAttribute("showTipsUtl", showTipsUtl);
+//		model.addAttribute("showTipsBtnText", showTipsBtnText);
 		return "admin/system/index";
 	}
-	
+
 	/**
 	 * 注销登录
 	 * @return
@@ -192,7 +192,7 @@ public class SystemController {
 		}
 		return "redirect:login";
 	}
-	
+
 	/**
 	 * 无权限提示页面
 	 * @return
@@ -201,7 +201,7 @@ public class SystemController {
 	public String noRight(){
 		return "admin/system/no_right";
 	}
-	
+
 	/**
 	 * 修改用户个人信息
 	 * @return
@@ -210,7 +210,7 @@ public class SystemController {
 	public String updateUserInfo(){
 		return "admin/system/update_userinfo";
 	}
-	
+
 	/**
 	 * 修改个人信息保存
 	 * @param user
@@ -228,7 +228,7 @@ public class SystemController {
 		SessionUtil.set(SessionConstant.SESSION_USER_LOGIN_KEY, loginedUser);
 		return "redirect:update_userinfo";
 	}
-	
+
 	/**
 	 * 修改密码页面
 	 * @return
@@ -237,7 +237,7 @@ public class SystemController {
 	public String updatePwd(){
 		return "admin/system/update_pwd";
 	}
-	
+
 	/**
 	 * 修改密码表单提交
 	 * @param oldPwd
@@ -263,7 +263,7 @@ public class SystemController {
 		SessionUtil.set(SessionConstant.SESSION_USER_LOGIN_KEY, loginedUser);
 		return Result.success(true);
 	}
-	
+
 	/**
 	 * 日志管理列表
 	 * @param model
@@ -278,7 +278,7 @@ public class SystemController {
 		model.addAttribute("title", "日志列表");
 		return "admin/system/operator_log_list";
 	}
-	
+
 	/**
 	 * 删除操作日志，可删除多个
 	 * @param ids
@@ -295,7 +295,7 @@ public class SystemController {
 		}
 		return Result.success(true);
 	}
-	
+
 	/**
 	 * 验证订单
 	 * @param orderSn
@@ -322,7 +322,7 @@ public class SystemController {
 		AppConfig.ORDER_AUTH = 1;
 		return Result.success(true);
 	}
-	
+
 	/**
 	 * 清空整个日志
 	 * @return
