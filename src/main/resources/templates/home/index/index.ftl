@@ -8,7 +8,7 @@
 </head>
 <body>
   <#include "../common/top_header.ftl"/>
-	<#include "../common/left_menu.ftl"/> 
+	<#include "../common/left_menu.ftl"/>
     <div class="container">
    		<div class="main center">
                 <div class="wrap-site mt20">
@@ -20,7 +20,7 @@
                 </#list>
                 </#if>
             </ul>
-            <#if ylrc_auth != 1>
+            <#if ylrc_auth = 1>
             <p class="h6 text-white m-t-0" style="font-size:16px;margin-top:10px;" id="show-copyright">本系统由【猿来入此】发布，请认准官网获取，官网获取的正版源码提供免费更新升级！</p>
             <p class="h3 text-white m-b-0" style="font-size:16px;margin-top:10px;">正版官网地址：<a href="https://www.yuanlrc.com/product/details.html?pid=326&fuid=4" style="color:red;margin-right:20px;">https://www.yuanlrc.com</a><a href="javascript:alert('请登录后台首页后点击去广告按钮，后台验证成功后刷新一下此处的自动消失!')" class="btn btn-danger" id="order-auth-btn">点我去广告</a></p>
         	</#if>
@@ -29,12 +29,12 @@
             <div id="nav-labels">
                 <button id="new_pro" class="labels" onclick="" ></button>
             </div>
-           
+
         </div>
-        
+
         <div class="item-list">
             <ul class="items clearfix">
-            
+
             	<#if pageBean.content??>
             	<#list pageBean.content as goods>
             	<li class="item">
@@ -83,7 +83,7 @@
 </div>
 <div class="return-to-top"><a href="#"></a></div><!--返回顶部-->
  	<#include "../common/right_menu.ftl"/>
-	<#include "../common/bottom_footer.ftl"/> 
+	<#include "../common/bottom_footer.ftl"/>
 <script  src="/home/js/jquery-3.1.1.min.js"></script>
 <script src="/home/js/common.js"></script>
 <script src="/home/js/index.js"></script>
