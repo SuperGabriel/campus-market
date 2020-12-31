@@ -173,10 +173,10 @@ public class SystemController {
 		model.addAttribute("goodsTotal", goodsService.total());
 		model.addAttribute("commentTotal", commentService.total());
 		model.addAttribute("wantGoodsTotal", wantedGoodsService.total());
-//		model.addAttribute("showTipsText", showTipsText);
-//		model.addAttribute("showTipsUrlText", showTipsUrlText);
-//		model.addAttribute("showTipsUtl", showTipsUtl);
-//		model.addAttribute("showTipsBtnText", showTipsBtnText);
+		model.addAttribute("showTipsText", showTipsText);
+		model.addAttribute("showTipsUrlText", showTipsUrlText);
+		model.addAttribute("showTipsUtl", showTipsUtl);
+		model.addAttribute("showTipsBtnText", showTipsBtnText);
 		return "admin/system/index";
 	}
 

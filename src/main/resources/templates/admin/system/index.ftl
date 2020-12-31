@@ -7,31 +7,31 @@
 <#include "../common/header.ftl"/>
 
 </head>
-  
+
 <body>
 <div class="lyear-layout-web">
   <div class="lyear-layout-container">
     <!--左侧导航-->
     <aside class="lyear-layout-sidebar">
-      
+
       <!-- logo -->
       <div id="logo" class="sidebar-header">
         <a href="index.html"><img src="/admin/images/logo-sidebar.png" title="${siteName!""}" alt="${siteName!""}" /></a>
       </div>
-      <div class="lyear-layout-sidebar-scroll"> 
+      <div class="lyear-layout-sidebar-scroll">
         <#include "../common/left-menu.ftl"/>
       </div>
-      
+
     </aside>
     <!--End 左侧导航-->
-    
+
     <#include "../common/header-menu.ftl"/>
-    
+
     <!--页面主要内容-->
     <main class="lyear-layout-content">
-      
+
       <div class="container-fluid">
-        
+
         <div class="row">
           <div class="col-sm-6 col-lg-3">
             <div class="card bg-primary">
@@ -44,7 +44,7 @@
               </div>
             </div>
           </div>
-          
+
           <div class="col-sm-6 col-lg-3">
             <div class="card bg-danger">
               <div class="card-body clearfix">
@@ -56,7 +56,7 @@
               </div>
             </div>
           </div>
-          
+
           <div class="col-sm-6 col-lg-3">
             <div class="card bg-success">
               <div class="card-body clearfix">
@@ -68,7 +68,7 @@
               </div>
             </div>
           </div>
-          
+
           <div class="col-sm-6 col-lg-3">
             <div class="card bg-purple">
               <div class="card-body clearfix">
@@ -81,7 +81,7 @@
             </div>
           </div>
         </div>
-        
+
         <div class="row">
           <div class="col-sm-6 col-lg-3">
             <div class="card bg-primary">
@@ -94,7 +94,7 @@
               </div>
             </div>
           </div>
-          
+
           <div class="col-sm-6 col-lg-3">
             <div class="card bg-danger">
               <div class="card-body clearfix">
@@ -106,7 +106,7 @@
               </div>
             </div>
           </div>
-          
+
           <div class="col-sm-6 col-lg-3">
             <div class="card bg-success">
               <div class="card-body clearfix">
@@ -118,7 +118,7 @@
               </div>
             </div>
           </div>
-          
+
           <div class="col-sm-6 col-lg-3">
             <div class="card bg-purple">
               <div class="card-body clearfix">
@@ -137,8 +137,6 @@
             <div class="card bg-primary">
               <div class="card-body clearfix">
                 <div class="pull-left">
-                  <p class="h6 text-white m-t-0">${showTipsText}</p>
-                  <p class="h3 text-white m-b-0">${showTipsUrlText}<a href="${showTipsUtl}" style="color:red;margin-right:20px;">https://www.yuanlrc.com</a><a href="javascript:void(0)" class="btn btn-danger" id="order-auth-btn">${showTipsBtnText}</a></p>
                   <p class="h5 text-white m-b-0"></p>
                 </div>
               </div>
@@ -147,7 +145,7 @@
         </div>
         </#if>
         <div class="row">
-          
+
           <div class="col-lg-12">
             <div class="card">
               <div class="card-header">
@@ -181,11 +179,11 @@
               </div>
             </div>
           </div>
-          
+
         </div>
-        
+
       </div>
-      
+
     </main>
     <!--End 页面主要内容-->
   </div>
@@ -195,7 +193,7 @@
 <script type="text/javascript" src="/admin/js/main.min.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
-	
+
 });
 
 </script>
